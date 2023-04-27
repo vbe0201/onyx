@@ -5,3 +5,7 @@ version = 3
 [[package]]
 name = "onyx"
 version = "0.1.0"
+
+[[package]]
+name = "onyx-loader"
+version = "0.1.0"

@@ -1,0 +1,8 @@
+[package]
+name = "onyx-loader"
+version = "0.1.0"
+authors = ["Valentin B. <valentin.be@protonmail.com>"]
+description = "Implementation of the Onyx Kernel Loader"
+edition = "2021"
+
+[dependencies]
