@@ -88,6 +88,7 @@ fn read_config<P: AsRef<Path>>(path: P) -> anyhow::Result<Config> {
     config_path.push("build");
     config_path.push("config");
     config_path.push(path);
+    config_path.set_extension("toml");
 
     // Deserialize the config file.
     Config::read(config_path)
