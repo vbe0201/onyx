@@ -1,0 +1,19 @@
+target = "riscv64imac-unknown-none-elf"
+
+[image]
+
+[kernel]
+linker-script = "riscv64_kernel_qemu.x"
+
+[loader]
+linker-script = "riscv64_loader_qemu.x"
+
+[qemu]
+name = "riscv64"
+extra-args = [
+    "-machine", "virt",
+    "-nographic",
+    "-monitor", "none",
+    "-serial", "stdio",
+    "-bios", "build/opensbi/fw_jump.bin"
+]

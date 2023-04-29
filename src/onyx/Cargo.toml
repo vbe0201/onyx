@@ -6,3 +6,8 @@ description = "Implementation of the Onyx kernel"
 edition = "2021"
 
 [dependencies]
+
+[features]
+default = []
+
+generic = []

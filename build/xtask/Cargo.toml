@@ -1,0 +1,16 @@
+[package]
+name = "xtask"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0"
+binrw = "0.11"
+cargo_metadata = "0.15"
+clap = { version = "4.2", features = ["derive"] }
+flate2 = "1.0"
+memchr = "2.5"
+rustc_version = "0.4"
+serde = { version = "1", features = ["derive"] }
+toml = "0.7"
+xshell = "0.2"
