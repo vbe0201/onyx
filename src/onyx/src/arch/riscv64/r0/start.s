@@ -32,5 +32,8 @@ __onyx_kernel_layout:
 //
 // This is responsible for bootstrapping the Kernel on hart 0.
 //
+.section .r0.text, "ax", %progbits
+.global __onyx_bootstrap_kernel
+.type __onyx_bootstrap_kernel, %function
 __onyx_bootstrap_kernel:
     j __onyx_bootstrap_kernel
