@@ -68,14 +68,14 @@ SECTIONS {
 
     __data_end__ = .;
 
-    .bss ALIGN(16) : {
+    .bss ALIGN(8) : {
         HIDDEN(__bss_start__ = .);
         *(.bss .bss.*)
         *(COMMON)
         *(.dynbss)
 
         /* Reserve 4KiB of stack memory. */
-        . = ALIGN(16);
+        . = ALIGN(8);
         __stack_bottom__ = .;
         . += 0x1000;
         __stack_top__ = .;

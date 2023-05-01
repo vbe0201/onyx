@@ -83,8 +83,7 @@ SECTIONS {
 
     .data ALIGN(8) : {
         *(.data .data.*)
-        SORT(CONSTRUCTORS)
-        . = ALIGN(8);
+        *(.sdata .sdata.*)
     } :data
 
     . = ALIGN(PAGE_SIZE);

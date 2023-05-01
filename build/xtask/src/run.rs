@@ -12,11 +12,12 @@ pub fn run_in_qemu(sh: &Shell, image: PathBuf, config: &Config) -> anyhow::Resul
     let _cwd = sh.push_dir(rustc::project_root());
 
     let (system, extra_args) = (&config.qemu.name, &config.qemu.extra_args);
+    let load_address = config.qemu.address.to_string();
     cmd!(
         sh,
         "qemu-system-{system}
             {extra_args...}
-            -kernel {image}"
+            -device loader,file={image},addr={load_address}"
     )
     .run()?;
 

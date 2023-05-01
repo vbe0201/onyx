@@ -93,6 +93,8 @@ pub struct Loader {
 pub struct Qemu {
     /// The name of the QEMU executable to use.
     pub name: String,
+    /// Load address for the kernel image during boot.
+    pub address: usize,
     /// Extra arguments to pass to a QEMU invocation.
     pub extra_args: Vec<String>,
 }

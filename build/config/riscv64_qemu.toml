@@ -10,6 +10,7 @@ linker-script = "riscv64_loader_qemu.x"
 
 [qemu]
 name = "riscv64"
+address = 0x80200000
 extra-args = [
     "-machine", "virt",
     "-nographic",
